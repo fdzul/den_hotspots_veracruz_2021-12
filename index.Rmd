@@ -1,6 +1,5 @@
 ---
-title: "Hotspots de la Transmisión de Dengue"
-subtitle: "Estratificación epidemiológica del Dengue"
+title: "Modelo estratégico de focalización de dengue en áreas urbanas"
 author: "Felipe Antonio Dzul Manzanilla"
 institute: "SESVER"
 date: "2021/12/10 (updated: `r Sys.Date()`)"
@@ -19,11 +18,6 @@ style_mono_light()
 
 ```
 
-```{r xaringan-logo, echo=FALSE}
-xaringanExtra::use_logo(
-  image_url = "https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/xaringan.png"
-)
-```
 ```{r xaringan-fit-screen, echo=FALSE}
 xaringanExtra::use_fit_screen()
 ```
@@ -37,6 +31,9 @@ xaringanExtra::use_share_again()
 ```
 
 
+
+
+
 # Felipe Dzul Manzanilla
 
 ![felipe](https://fdzul.github.io/web_site_fadm/)
@@ -48,32 +45,30 @@ xaringanExtra::use_share_again()
 
 
 ---
-background-image: url(https://github.com/fdzul/manual_hotspots/blob/main/images/cover.jpg)
 
-```{r setup, include=FALSE}
-options(htmltools.dir.version = FALSE)
-```
+## Definición del Riesgo de Transmisión del Dengue.
 
-???
+- **Riesgo Muy Alto**. Áreas definidas como aquellas unidades espaciales (AGEBS) identificadas como hotspots de transmisión de dengue que presentan sobrelape espacial con los hotspots de la abundancia de huevos de *Ae. aegypti* y concordancia espacial con los cluster de transmisión de dengue (Satscan análisis) y las cadenas de transmision (knox test). El sobrelape espacial de los space-time análisis aun no esta implementado. 
 
-Image credit: [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:Sharingan_triple.svg)
+
+- **Riesgo Alto**. Áreas identificadas como hotspots de transmisión de dengue.
+
+- **Riesgo Medio**. Áreas identificadas como hotspots de transmisión de la abundancia de Huevos de *Ae. aegypti*.
+
+- 4)  **Riesgo Bajo**. Áreas sin hotspots de transmisión de dengue y áreas sin hotspot de la abundancias del vector.
 
 
 ---
 
-class: center, middle
-
 # Thanks!
 
-Felipe Antonio Dzul Manzanilla
+- ***email***       :     felipe.dzul.m@gmail.com
 
-email: felipe.dzul.m@gmail.com
+- ***celular***     :     228 229 3419
 
+- ***slides***:     https://jolly-edison-c35bbb.netlify.app/
 
-Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan).
-
-
-
+- ***próximo curso***: ***Análisis espacial del dengue en [R](https://cran.r-project.org/) y [Python](https://www.python.org/)***
 
 
-The chakra comes from [remark.js](https://remarkjs.com), [**knitr**](https://yihui.org/knitr/), and [R Markdown](https://rmarkdown.rstudio.com).
+Slides created via the R package [**xaringan**](https://github.com/yihui/xaringan), & [R Markdown](https://rmarkdown.rstudio.com).
