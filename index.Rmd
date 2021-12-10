@@ -11,11 +11,6 @@ output:
       countIncrementalSlides: false
 ---
 
-```{r xaringan-themer, include=FALSE, warning=FALSE}
-library(xaringanthemer)
-
-
-```
 
 ```{r xaringan-fit-screen, echo=FALSE}
 xaringanExtra::use_fit_screen()
@@ -367,7 +362,7 @@ DiagrammeR::grViz("digraph {
 
 ### Formula del estadístico espacial local $G_{i}^{*}$ (Hotspots)
 
-$G_{i}^{*}$ = $\frac{\sum_{j = 1}^{n} w_{ij}x_{j}}{\sum_{j = 1}^{n} x_{j}}$
+### $G_{i}^{*}$ = $\frac{ \sum_{j = 1}^{n} w_{ij}x_{j}  }{\sum_{j = 1}^{n} x_{j}}$
 
 
 donde:
@@ -380,9 +375,35 @@ $\frac{\sum_{j = 1}^{n} w_{ij}x_{j}}{}$ = el numerador, es la suma de los valore
  $\frac{}{\sum_{j = 1}^{n} x_{j}}$ = el denominador, es la suma de todos los valores $x$ en toda la localidad de interes.
 
 
+### **hotspots** 
+
+son las áreas o las unidades espaciales con valores altos de $G_{i}^{*}$ y homogéneos de la unidad espaciales de interes $x_{ij}$. En otras palabras el estadístico espacial, identifica las unidades espaciales $x_{ij}$ con valores altos comparados con el valor promedio de todas la unidades espaciales en la localidad de interes.
+
+---
+### Hotspots de Transmisión de Dengue en Guadalajara.
+
+```{r,echo=FALSE,dpi=300, warning = FALSE,message = FALSE, fig.align ="center", out.width = "80%",fig.cap = "Hotspots de la transmisión de dengue en el área metropolitana de Guadalajara."}
+
+# Step 1. load the hotspots dengue cases ####
+load("C:/Users/felip/OneDrive/proyects/hotspots/8.RData/cases_hotspots_agebs19.RData")
+cases_hotspots_agebs19 <- cases_hotspots_agebs19 |> sf::st_make_valid()
+source("C:/Users/felip/Dropbox/r_developments/r_dashboards/github_pages/test_dashboard/3.Functions/hotspots_map.R")
+hotspots_map(cve_ent = "14",
+             locality = c("Guadalajara", "Zapopan",
+                          "Tlaquepaque", "Tonalá"),
+             hotspots = cases_hotspots_agebs19,
+             static_map = FALSE)
+
+```
+
+
+
+
 ---
 
 #### Definición del Riesgo de Transmisión.
+
+
 .bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt5[
 **Riesgo Muy Alto**. Áreas definidas como aquellas unidades espaciales (AGEBS) identificadas como hotspots de transmisión de dengue que presentan sobrelape espacial con los hotspots de la abundancia de huevos de *Ae. aegypti* y concordancia espacial con los cluster de transmisión de dengue (Satscan análisis) y las cadenas de transmision (knox test). El sobrelape espacial de los space-time análisis aun no esta implementado. 
 ]
@@ -390,8 +411,6 @@ $\frac{\sum_{j = 1}^{n} w_{ij}x_{j}}{}$ = el numerador, es la suma de los valore
 .bg-salmon.b--orange.ba.bw2.br3.shadow-5.ph4.mt5[
 **Riesgo Alto**. Áreas identificadas como hotspots de transmisión de dengue.
 ]
-
-
 
 
 ---
