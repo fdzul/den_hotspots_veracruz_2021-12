@@ -26,6 +26,10 @@ xaringanExtra::use_fit_screen()
 xaringanExtra::use_progress_bar(color = "#0051BA", location = "top")
 ```
 
+```{r xaringan-tachyons, echo=FALSE}
+xaringanExtra::use_tachyons()
+```
+
 ```{r share-again, echo=FALSE}
 xaringanExtra::use_share_again()
 ```
@@ -45,17 +49,29 @@ xaringanExtra::use_share_again()
 
 
 ---
+## Definición del Riesgo de Transmisión.
+.bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt5[
+**Riesgo Muy Alto**. Áreas definidas como aquellas unidades espaciales (AGEBS) identificadas como hotspots de transmisión de dengue que presentan sobrelape espacial con los hotspots de la abundancia de huevos de *Ae. aegypti* y concordancia espacial con los cluster de transmisión de dengue (Satscan análisis) y las cadenas de transmision (knox test). El sobrelape espacial de los space-time análisis aun no esta implementado. 
+]
 
-## Definición del Riesgo de Transmisión del Dengue.
+.bg-salmon.b--orange.ba.bw2.br3.shadow-5.ph4.mt5[
+**Riesgo Alto**. Áreas identificadas como hotspots de transmisión de dengue.
+]
 
-- **Riesgo Muy Alto**. Áreas definidas como aquellas unidades espaciales (AGEBS) identificadas como hotspots de transmisión de dengue que presentan sobrelape espacial con los hotspots de la abundancia de huevos de *Ae. aegypti* y concordancia espacial con los cluster de transmisión de dengue (Satscan análisis) y las cadenas de transmision (knox test). El sobrelape espacial de los space-time análisis aun no esta implementado. 
 
 
-- **Riesgo Alto**. Áreas identificadas como hotspots de transmisión de dengue.
 
-- **Riesgo Medio**. Áreas identificadas como hotspots de transmisión de la abundancia de Huevos de *Ae. aegypti*.
+---
 
-- 4)  **Riesgo Bajo**. Áreas sin hotspots de transmisión de dengue y áreas sin hotspot de la abundancias del vector.
+## Definición del Riesgo de Transmisión.
+
+.bg-gold.b--yellow.ba.bw2.br3.shadow-5.ph4.mt5[
+**Riesgo Medio**. Áreas identificadas como hotspots de transmisión de la abundancia de Huevos de *Ae. aegypti*.
+]
+
+.bg-springgreen.b--green.ba.bw2.br3.shadow-5.ph4.mt5[
+**Riesgo Bajo**. Áreas sin hotspots de transmisión de dengue y áreas sin hotspot de la abundancias del vector.
+]
 
 
 ---
