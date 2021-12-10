@@ -199,7 +199,7 @@ htmltools::html_print(htmltools::tagList(htmltools::tags$style(style), a))
 
 ---
 
-Algoritmo para el cálculo de los Hotspots (casos)
+### Algoritmo para la identificación de los Hotspots de los Casos
 
 ```{r, dpi=300,echo=FALSE, fig.align ="center", out.width = "100%"}
 DiagrammeR::grViz("digraph {
@@ -244,7 +244,8 @@ DiagrammeR::grViz("digraph {
 ```
 
 ---
-Algoritmo para el cálculo de los Hotspots I (vector)
+
+### Algoritmo para la identificación de los Hotspots  del Vector
 
 ```{r, echo=FALSE,dpi=300, fig.align ="center", out.width = "100%"}
 DiagrammeR::grViz("digraph {
@@ -305,7 +306,7 @@ DiagrammeR::grViz("digraph {
 
 ---
 
-Algoritmo para el cálculo de los Hotspots II (vector)
+### Algoritmo  para la identificación de los Hotspots del Vector
 
 ```{r, echo=FALSE,dpi=300, fig.align ="center", out.width = "100%"}
 DiagrammeR::grViz("digraph {
@@ -362,9 +363,26 @@ DiagrammeR::grViz("digraph {
 ```
 
 
+---
+
+### Formula del estadístico espacial local $G_{i}^{*}$ (Hotspots)
+
+$G_{i}^{*}$ = $\frac{\sum_{j = 1}^{n} w_{ij}x_{j}}{\sum_{j = 1}^{n} x_{j}}$
+
+
+donde:
+ 
+$\frac{\sum_{j = 1}^{n} w_{ij}x_{j}}{}$ = el numerador, es la suma de los valores $x_{j}$ de la localidad de interes de la unidad espacial de interes $x_{i}$ &
+ 
+  
+ 
+ 
+ $\frac{}{\sum_{j = 1}^{n} x_{j}}$ = el denominador, es la suma de todos los valores $x$ en toda la localidad de interes.
+
 
 ---
-## Definición del Riesgo de Transmisión.
+
+#### Definición del Riesgo de Transmisión.
 .bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt5[
 **Riesgo Muy Alto**. Áreas definidas como aquellas unidades espaciales (AGEBS) identificadas como hotspots de transmisión de dengue que presentan sobrelape espacial con los hotspots de la abundancia de huevos de *Ae. aegypti* y concordancia espacial con los cluster de transmisión de dengue (Satscan análisis) y las cadenas de transmision (knox test). El sobrelape espacial de los space-time análisis aun no esta implementado. 
 ]
@@ -378,7 +396,7 @@ DiagrammeR::grViz("digraph {
 
 ---
 
-## Definición del Riesgo de Transmisión.
+#### Definición del Riesgo de Transmisión.
 
 .bg-gold.b--yellow.ba.bw2.br3.shadow-5.ph4.mt5[
 **Riesgo Medio**. Áreas identificadas como hotspots de transmisión de la abundancia de Huevos de *Ae. aegypti*.
