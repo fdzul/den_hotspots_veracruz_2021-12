@@ -6,13 +6,41 @@ institute: "SESVER"
 date: "2021/12/10 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
-    lib_dir: libs
+    css: ["xaringan-themer.css"]
     nature:
-      highlightStyle: github
       highlightLines: true
       countIncrementalSlides: false
 ---
 
+```{r xaringan-themer, include=FALSE, warning=FALSE}
+library(xaringanthemer)
+style_mono_light()
+
+
+```
+
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/xaringan.png"
+)
+```
+
+```{r share-again, echo=FALSE}
+xaringanExtra::use_share_again()
+```
+
+
+# Felipe Dzul Manzanilla
+
+![felipe](https://fdzul.github.io/web_site_fadm/)
+
+## Educación
+
+## Experiencia Laboral 
+
+
+
+---
 background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
 
 ```{r setup, include=FALSE}
