@@ -1,5 +1,5 @@
 ---
-title: "Mapas de Riesgo de Dengue"
+title: "Hotspots de la Transmisión de Dengue"
 subtitle: "Estratificación epidemiológica del Dengue"
 author: "Felipe Antonio Dzul Manzanilla"
 institute: "SESVER"
@@ -24,6 +24,13 @@ xaringanExtra::use_logo(
   image_url = "https://raw.githubusercontent.com/rstudio/hex-stickers/master/PNG/xaringan.png"
 )
 ```
+```{r xaringan-fit-screen, echo=FALSE}
+xaringanExtra::use_fit_screen()
+```
+
+```{r xaringanExtra, echo = FALSE}
+xaringanExtra::use_progress_bar(color = "#0051BA", location = "top")
+```
 
 ```{r share-again, echo=FALSE}
 xaringanExtra::use_share_again()
@@ -41,7 +48,7 @@ xaringanExtra::use_share_again()
 
 
 ---
-background-image: url(https://upload.wikimedia.org/wikipedia/commons/b/be/Sharingan_triple.svg)
+background-image: url(https://github.com/fdzul/manual_hotspots/blob/main/images/cover.jpg)
 
 ```{r setup, include=FALSE}
 options(htmltools.dir.version = FALSE)
