@@ -198,6 +198,54 @@ htmltools::html_print(htmltools::tagList(htmltools::tags$style(style), a))
 ```
 
 
+---
+
+
+Algoritmo para el cálculo de los Hotspots (casos)
+
+```{r, dpi=300,echo=FALSE, fig.align ="center", out.width = "100%"}
+DiagrammeR::grViz("digraph {
+
+  # graph definitions
+  graph [layout = dot, rankdir = TB]
+  
+  # node definitions
+  node [shape = rectangle, style = filled, color = grey] 
+  
+  # flowchart for hotspots
+  sinave [label = 'SINAVE',  fillcolor = 'SeaGreen', color = 'white', fontcolor = 'white']
+  denv [label = 'Bases de DENV',  fillcolor = 'SeaGreen', color = 'white', fontcolor = 'white']
+  geocode [label = 'Geocodificación',  fillcolor = 'SeaGreen', color = 'white', fontcolor = 'white']
+  cases_ageb [label = 'Casos por AGEBs']
+  z_score [label = 'Z-score']
+  gi [label = 'Estadístico Espacial Local (Gi*)']
+  bonferroni [label = 'Corrección de Bonferroni']
+  hotspots [label = 'Hotspots', style = filled, color = orange]
+  vis [label = 'Visualizacion de los Hotspots']
+  
+  # flow chart for inegi
+  inegi [label = 'INEGI', fillcolor = 'DeepSkyBlue', color = 'white', fontcolor = 'black']
+  loc [label = 'Localidades Shapefile', fillcolor = 'DeepSkyBlue', color = 'white', fontcolor = 'black']
+  ageb [label = 'AGEB Shapefile', fillcolor = 'DeepSkyBlue', color = 'white', fontcolor = 'black']
+  loc_esp [label = 'Localidad de Ínteres', fillcolor = 'DeepSkyBlue', color = 'white', fontcolor = 'black']
+  ageb_esp [label = 'AGEBs de la Localidad de Ínteres', fillcolor = 'DeepSkyBlue', color = 'white', fontcolor = 'black']
+  mat [label = 'Matriz de Adjacencias', fillcolor = 'DeepSkyBlue', color = 'white', fontcolor = 'black']
+  
+  # edge definitions with the node IDs
+  edge [color = black]
+  sinave -> denv -> geocode -> cases_ageb -> z_score -> gi -> bonferroni -> hotspots -> vis
+  inegi -> {ageb, loc}
+  loc -> loc_esp -> ageb_esp
+  ageb -> ageb_esp
+  ageb_esp -> mat
+  mat -> cases_ageb 
+ 
+  }", 
+  height = 650)
+
+```
+
+
 
 ---
 ## Definición del Riesgo de Transmisión.
