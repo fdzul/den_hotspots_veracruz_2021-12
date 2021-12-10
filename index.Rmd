@@ -1,7 +1,7 @@
 ---
-title: "Modelo estratégico de focalización de dengue en áreas urbanas"
+title: "Modelo estratégico de focalización del dengue en áreas urbanas"
 author: "Felipe Antonio Dzul Manzanilla"
-institute: "SESVER"
+institute: "SESVER-CENAPRECE"
 date: "2021/12/10 (updated: `r Sys.Date()`)"
 output:
   xaringan::moon_reader:
@@ -382,7 +382,7 @@ son las áreas o las unidades espaciales con valores altos de $G_{i}^{*}$ y homo
 ---
 ### Hotspots de Transmisión de Dengue en Guadalajara.
 
-```{r,echo=FALSE,dpi=300, warning = FALSE,message = FALSE, fig.align ="center", out.width = "80%",fig.cap = "Hotspots de la transmisión de dengue en el área metropolitana de Guadalajara."}
+```{r,echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "80%"}
 
 # Step 1. load the hotspots dengue cases ####
 load("C:/Users/felip/OneDrive/proyects/hotspots/8.RData/cases_hotspots_agebs19.RData")
@@ -395,8 +395,6 @@ hotspots_map(cve_ent = "14",
              static_map = FALSE)
 
 ```
-
-
 
 
 ---
