@@ -37,37 +37,19 @@ xaringanExtra::use_share_again()
 ```
 
 
-# [Felipe Antonio Dzul Manzanilla](https://fdzul.github.io/web_site_fadm/)
-
-&nbsp;
-
-### Resumen Biográfico
-&nbsp;
-### Educación
-&nbsp;
-### Experiencia Laboral
-&nbsp;
-### Artículos Publicados
-&nbsp;
-### Libros y manuales
-&nbsp;
-### Paquetes, dashboards, bookdowns in R
-
----
-
 ## Temas 
 
 &nbsp;
 
 ### a) Línea de tiempo del programa.
 
-### b) Definición de hotpots. 
+### b) Definición de los Hotpots. 
 
-### c) Hotspots de la enfermedad y Hotspots del vector.
+### c) Hotspots de los Casos y Hotspots del Vector.
 
-### d) Cadenas de transmisión.
+### d) Cadenas de Transmisión.
 
-### e)  Spatial Log Gausaian Cox Procces
+### e) Spatial Log Gausaian Cox Procces
 
 ### f) Modelo estratégico de focalización de dengue en áreas urbanas
 
@@ -371,7 +353,7 @@ DiagrammeR::grViz("digraph {
 
 ---
 
-### Formula del Estadístico Espacial Local $G_{i}^{*}$ (Hotspots)
+### Estadístico Espacial Local $G_{i}^{*}$ (Hotspots)
 
 &nbsp;
 ### $G_{i}^{*}$ = $\frac{ \sum_{j = 1}^{n} w_{ij}x_{j}  }{\sum_{j = 1}^{n} x_{j}}$
@@ -416,7 +398,6 @@ son las áreas o las unidades espaciales con valores altos de $G_{i}^{*}$ y homo
 ### Spatial Log Gaussian Cox Process
 
 
-]
 
 
 ---
