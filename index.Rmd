@@ -427,6 +427,31 @@ hotspots_eggs_intensity(hotspots_eggs = spde_eggs_guadalajara_zinb1,
 
 ```
 
+---
+
+### cadenas de Transmisión 
+
+```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "75%", out.height="75%"}
+# 1. Subir el archivo cas y geo generado con la función write_cas_geo
+load("C:/Users/felip/Dropbox/manual_hotspots_veracruz/9.cas&geo_files/Xalapa de Enriquez302019.RData")
+
+# 2. aplicar la prueba de knox
+library(magrittr)
+knox_res <- denhotspots::knox(x = x_data, 
+                              crs = "+proj=eqc", 
+                              ds = 400, 
+                              dt = 20, 
+                              sym = 1000, 
+                              sp_link = FALSE,
+                              planar_coord = FALSE)
+denhotspots::space_time_link_map(x = knox_res,
+                                 locality = "Xalapa de Enríquez",
+                                 cve_edo = "30",
+                                 maptype = "staticmap",
+                                 facetmap = FALSE)
+```
+
+
 
 ---
 
