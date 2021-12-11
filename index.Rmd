@@ -467,8 +467,16 @@ denhotspots::space_time_link_map(x = knox_res,
 ### Spatial Log Gaussian Cox Process
 
 ```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "90%", out.height="90%"}
+# Step 1. load the dataset ####
+load("C:/Users/felip/OneDrive/proyects/spatial_analysis_dengue/space_time_analysis/rsatscan/9.cas&geo_files/Xalapa de Enriquez302019.RData")
+rm(x_cas, x_geo)
+
+# Step 2. load the fuctions ####
 source("C:/Users/felip/OneDrive/proyects/spatial_analysis_dengue/point_process/spatial_point_process/3.Functions/spatial_lgcp.R")
 source("C:/Users/felip/OneDrive/proyects/spatial_analysis_dengue/point_process/spatial_point_process/3.Functions/lgcp_map.R")
+library(magrittr)
+library(sf)
+library(inlabru)
 mod_lattice_lgcp <- spatial_lgcp(dataset = x_data,
                                  locality = "Xalapa de Enríquez",
                                  cve_edo = "30",
@@ -519,6 +527,9 @@ lgcp_map(x = mod_lattice_lgcp,
 ---
 ### Mapa de Riesgo de Transmisión de Guadalajara
 
+```{r}
+
+```
 
 
 
