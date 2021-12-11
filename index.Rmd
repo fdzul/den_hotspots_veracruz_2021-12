@@ -194,7 +194,7 @@ htmltools::html_print(htmltools::tagList(htmltools::tags$style(style), a))
 
 ---
 
-### Algoritmo para la identificación de los Hotspots de los Casos
+### Algoritmo para la identificación de los Hotspots de Dengue
 
 ```{r, dpi=300,echo=FALSE, fig.align ="center", out.width = "100%"}
 DiagrammeR::grViz("digraph {
@@ -240,7 +240,7 @@ DiagrammeR::grViz("digraph {
 
 ---
 
-### Algoritmo para la identificación de los Hotspots  del Vector
+### Algoritmo para la identificación de los Hotspots del Vector
 
 ```{r, echo=FALSE,dpi=300, fig.align ="center", out.width = "100%"}
 DiagrammeR::grViz("digraph {
@@ -380,7 +380,7 @@ $\frac{\sum_{j = 1}^{n} w_{ij}x_{j}}{}$ = el numerador, es la suma de los valore
 son las áreas o las unidades espaciales con valores altos de $G_{i}^{*}$ y homogéneos de la unidad espaciales de interes $x_{ij}$. En otras palabras el estadístico espacial, identifica las unidades espaciales $x_{ij}$ con valores altos comparados con el valor promedio de todas la unidades espaciales en la localidad de interes.
 
 ---
-### Hotspots de Transmisión de Dengue en Guadalajara.
+### Hotspots de la Transmisión de Dengue en Guadalajara.
 
 ```{r,echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "80%"}
 
@@ -396,10 +396,16 @@ hotspots_map(cve_ent = "14",
 
 ```
 
+---
+ 
+### Hotspots del Vector en Monterrey, Nuevo León.
+
+
+
 
 ---
 
-#### Definición del Riesgo de Transmisión.
+### Definición del Riesgo de Transmisión.
 
 
 .bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt5[
@@ -413,7 +419,8 @@ hotspots_map(cve_ent = "14",
 
 ---
 
-#### Definición del Riesgo de Transmisión.
+
+### Definición del Riesgo de Transmisión.
 
 .bg-gold.b--yellow.ba.bw2.br3.shadow-5.ph4.mt5[
 **Riesgo Medio**. Áreas identificadas como hotspots de transmisión de la abundancia de Huevos de *Ae. aegypti*.
