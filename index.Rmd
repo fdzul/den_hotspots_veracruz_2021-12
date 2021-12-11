@@ -245,7 +245,7 @@ DiagrammeR::grViz("digraph {
   mat -> cases_ageb 
  
   }", 
-  height = 650)
+  height = 500)
 
 ```
 
@@ -306,7 +306,7 @@ DiagrammeR::grViz("digraph {
 
   
   }", 
-  height = 600)
+  height = 500)
 
 ```
 
@@ -364,7 +364,7 @@ DiagrammeR::grViz("digraph {
 
   
   }", 
-  height = 600)
+  height = 500)
 
 ```
 
@@ -415,8 +415,7 @@ son las áreas o las unidades espaciales con valores altos de $G_{i}^{*}$ y homo
 ---
 ### Spatial Log Gaussian Cox Process
 
-.center[
-![:gen 90%](C:/Users/felip/Dropbox/r_developments/r_dashboards/github_pages/test_dashboard/6.Maps/lgcp_map/lgcp_xalapa.jpg)
+
 ]
 
 
