@@ -400,7 +400,7 @@ hotspots_map(cve_ent = "14",
  
 ### Hotspots del Vector en Guadalajara, Jalisco.
 
-```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center"}
+```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "75%", out.height="75%"}
 # Step 1. load the hotspots cases dataset #####
 load("C:/Users/felip/OneDrive/proyects/hotspots/8.RData/cases_hotspots_agebs19.RData")
 
