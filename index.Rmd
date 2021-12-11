@@ -398,9 +398,34 @@ hotspots_map(cve_ent = "14",
 
 ---
  
-### Hotspots del Vector en Monterrey, Nuevo León.
+### Hotspots del Vector en Guadalajara, Jalisco.
+
+```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center"}
+# Step 1. load the hotspots cases dataset #####
+load("C:/Users/felip/OneDrive/proyects/hotspots/8.RData/cases_hotspots_agebs19.RData")
 
 
+# Step 2. load the hotspots_eggs_intensity function  ####
+source("C:/Users/felip/Dropbox/r_developments/r_dashboards/github_pages/test_dashboard/3.Functions/hotspots_eggs_intensity.R")
+
+# Step 3. plot the hotspots eggs intensity Guadalajara ####
+# Step 3.1 load the hotspots eggs dataset Guadalajara ####
+load("C:/Users/felip/OneDrive/proyects/hotspots/8.RData/eggs_hotspots_historic/14_Jalisco/14_guadalajara_k20_zinb1.RData")
+
+# Step 3.2
+hotspots_eggs_intensity(hotspots_eggs = spde_eggs_guadalajara_zinb1,
+                        hotspots_cases = cases_hotspots_agebs19,
+                        cve_ent = "14",
+                        locality = c("Guadalajara", "Tlaquepaque", 
+                                     "Zapopan", "Tonalá"),
+                        pal_name = "OrYel",
+                        col_hotspot_cases = "#990000",
+                        perc_intensity = TRUE,
+                        static_map = TRUE)
+
+
+
+```
 
 
 ---
