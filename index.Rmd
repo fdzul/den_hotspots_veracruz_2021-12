@@ -363,8 +363,9 @@ DiagrammeR::grViz("digraph {
 
 ---
 
-### Formula del estadístico espacial local $G_{i}^{*}$ (Hotspots)
+### Formula del Estadístico Espacial Local $G_{i}^{*}$ (Hotspots)
 
+&nbsp;
 ### $G_{i}^{*}$ = $\frac{ \sum_{j = 1}^{n} w_{ij}x_{j}  }{\sum_{j = 1}^{n} x_{j}}$
 
 \color{blue}G_{\color{blue}i}^{\color{blue}*}
@@ -390,9 +391,9 @@ son las áreas o las unidades espaciales con valores altos de $G_{i}^{*}$ y homo
 ```{r,echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "80%"}
 
 # Step 1. load the hotspots dengue cases ####
-load("C:/Users/Usuario/OneDrive/proyects/hotspots/8.RData/cases_hotspots_agebs19.RData")
+load("C:/Users/felip/OneDrive/proyects/hotspots/8.RData/cases_hotspots_agebs19.RData")
 cases_hotspots_agebs19 <- cases_hotspots_agebs19 |> sf::st_make_valid()
-source("C:/Users/Usuario/Dropbox/r_developments/r_dashboards/github_pages/test_dashboard/3.Functions/hotspots_map.R")
+source("C:/Users/felip/Dropbox/r_developments/r_dashboards/github_pages/test_dashboard/3.Functions/hotspots_map.R")
 hotspots_map(cve_ent = "14",
              locality = c("Guadalajara", "Zapopan",
                           "Tlaquepaque", "Tonalá"),
@@ -407,15 +408,15 @@ hotspots_map(cve_ent = "14",
 
 ```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "75%", out.height="75%"}
 # Step 1. load the hotspots cases dataset #####
-load("C:/Users/Usuario/OneDrive/proyects/hotspots/8.RData/cases_hotspots_agebs19.RData")
+load("C:/Users/felip/OneDrive/proyects/hotspots/8.RData/cases_hotspots_agebs19.RData")
 
 
 # Step 2. load the hotspots_eggs_intensity function  ####
-source("C:/Users/Usuario/Dropbox/r_developments/r_dashboards/github_pages/test_dashboard/3.Functions/hotspots_eggs_intensity.R")
+source("C:/Users/felip/Dropbox/r_developments/r_dashboards/github_pages/test_dashboard/3.Functions/hotspots_eggs_intensity.R")
 
 # Step 3. plot the hotspots eggs intensity Guadalajara ####
 # Step 3.1 load the hotspots eggs dataset Guadalajara ####
-load("C:/Users/Usuario/OneDrive/proyects/hotspots/8.RData/eggs_hotspots_historic/14_Jalisco/14_guadalajara_k20_zinb1.RData")
+load("C:/Users/felip/OneDrive/proyects/hotspots/8.RData/eggs_hotspots_historic/14_Jalisco/14_guadalajara_k20_zinb1.RData")
 
 # Step 3.2
 hotspots_eggs_intensity(hotspots_eggs = spde_eggs_guadalajara_zinb1,
@@ -434,11 +435,11 @@ hotspots_eggs_intensity(hotspots_eggs = spde_eggs_guadalajara_zinb1,
 
 ---
 
-### cadenas de Transmisión 
+### Cadenas de Transmisión 
 
 ```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "80%", out.height="80%"}
 # 1. Subir el archivo cas y geo generado con la función write_cas_geo
-load("C:/Users/Usuario/Dropbox/manual_hotspots_veracruz/9.cas&geo_files/Xalapa de Enriquez302019.RData")
+load("C:/Users/felip/Dropbox/manual_hotspots_veracruz/9.cas&geo_files/Xalapa de Enriquez302019.RData")
 
 # 2. aplicar la prueba de knox
 library(magrittr)
@@ -457,7 +458,7 @@ denhotspots::space_time_link_map(x = knox_res,
 ```
 
 ---
-### cadenas de Transmisión 
+### Cadenas de Transmisión 
 ```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "80%", out.height="80%"}
 denhotspots::space_time_link_map(x = knox_res,
                                  locality = "Xalapa de Enríquez",
@@ -470,7 +471,7 @@ denhotspots::space_time_link_map(x = knox_res,
 ### Spatial Log Gaussian Cox Process
 
 .center[
-![:gen 90%, shadow](C:/Users/Usuario/Dropbox/r_developments/r_dashboards/github_pages/test_dashboard/6.Maps/lgcp_map/lgcp_xalapa.jpg)
+![:gen 90%, shadow](C:/Users/felip/Dropbox/r_developments/r_dashboards/github_pages/test_dashboard/6.Maps/lgcp_map/lgcp_xalapa.jpg)
 ]
 
 --- 
@@ -478,7 +479,7 @@ denhotspots::space_time_link_map(x = knox_res,
 ### Hotspots de los casos y Hotspots del vector
 
 .center[
-![:gen 90%, shadow](C:/Users/Usuario/Dropbox/r_developments/r_dashboards/github_pages/test_dashboard/6.Maps/stacked_map/stacked_maps_cases.jpg)
+![:gen 90%, shadow](C:/Users/felip/Dropbox/r_developments/r_dashboards/github_pages/test_dashboard/6.Maps/stacked_map/stacked_maps_cases.jpg)
 ]
 
 
