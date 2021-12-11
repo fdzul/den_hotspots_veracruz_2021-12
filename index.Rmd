@@ -433,7 +433,7 @@ hotspots_eggs_intensity(hotspots_eggs = spde_eggs_guadalajara_zinb1,
 
 ### cadenas de Transmisión 
 
-```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "90%", out.height="90%"}
+```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "80%", out.height="80%"}
 # 1. Subir el archivo cas y geo generado con la función write_cas_geo
 load("C:/Users/felip/Dropbox/manual_hotspots_veracruz/9.cas&geo_files/Xalapa de Enriquez302019.RData")
 
@@ -494,6 +494,90 @@ lgcp_map(x = mod_lattice_lgcp,
          map_type = "staticmap", 
          name = "YlGnBu")
 
+```
+
+--- 
+
+### Combinando los hotspots de los casos y el vector
+
+```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "90%", out.height="90%"}
+# Step 2. extract the ageb of guadalajara ####
+agebs <- cases_hotspots_agebs19 |>
+    sf::st_make_valid() |>
+    dplyr::filter(loc == "Guadalajara")
+
+
+# Step 3. load the geocoded dengue cases ####
+load("C:/Users/felip/OneDrive/proyects/priority_research_projects/hotspots_high_risk_localities_138/8.RData/geocoded_dataset.RData")
+
+cases <- y |>
+    sf::st_as_sf(coords = c("long", "lat"),
+                 crs = 4326)
+
+cases <- cases[agebs,]
+
+# Step 4. load rotate_data function ####
+source("C:/Users/felip/OneDrive/proyects/stack_maps/3.Functions/rotate_data.R")
+##########################
+library(magrittr)
+locality <- rgeomex::extract_ageb(locality = c("Guadalajara",
+                                               "Zapopan",
+                                               "Tonalá",
+                                               "Tlaquepaque"),
+                                  cve_geo = "14")
+
+
+# annotate parameters
+# annotate parameters
+
+x = -176.15
+color = 'gray40'
+ggplot2::ggplot() +
+    ggplot2::geom_sf(data = agebs |> rotate_data(),
+                     fill = "gray90",
+                     lwd = 0.01,
+                     col = "white") +
+    ggplot2::labs(caption = "image by @FDzul") +
+    cowplot::theme_map() +
+    ggplot2::geom_sf(data = locality$locality |> 
+                         rotate_data(y_add = .25),
+                     fill = "gray90",
+                     lwd = 0.01,
+                     col = "white") +
+    ggplot2::geom_sf(data = cases |> 
+                         rotate_data(y_add = .25),
+                     shape = 21,
+                     size = .5,
+                     lwd = 0.01,
+                     fill = "black",
+                     col = "red") +
+    ggplot2::geom_sf(data = agebs |> 
+                         rotate_data(y_add = .5),
+                     ggplot2::aes(fill = DENV_2019),
+                     lwd = 0.01,
+                     col = "white") +
+    ggplot2::theme(legend.position = "none") +
+    #fishualize::scale_fill_fish(option = "Hypsypops_rubicundus") +
+    #ggplot2::ggplot()+
+    ggplot2::geom_sf(data = agebs |> 
+                         rotate_data(y_add = .75),
+                     fill = "grey88",
+                     col = "white",
+                     lwd = 0.01) +
+    ggplot2::theme_void() +
+    ggplot2::geom_sf(data = agebs |> dplyr::filter(intensity_gi > 0) |> 
+                         rotate_data(y_add = .75),
+                     ggplot2::aes(fill = intensity_gi),
+                     col = "gray95",
+                     lwd = 0.01) +
+    ggplot2::scale_fill_gradientn(name = "Intensidad",
+                                  colours = c( rcartocolor::carto_pal(n = max(5),
+                                                  name = "OrYel")),
+                                  breaks = seq(from = 1,
+                                               to = max(5),
+                                               by = 1),
+                                  guide = "legend") +
+    ggplot2::theme(legend.position = "none")
 ```
 
 
