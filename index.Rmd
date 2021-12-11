@@ -56,7 +56,9 @@ xaringanExtra::use_share_again()
 
 ### c) Hotspots de la enfermedad y Hotspots del vector.
 
-### d) Clusters de casos de dengue y Cadenas de transmisión.
+### d) Cadenas de transmisión.
+
+### e)  Spatial Log Gausaian Cox Procces
 
 ### f) Modelo estratégico de focalización de dengue en áreas urbanas
 
@@ -431,7 +433,7 @@ hotspots_eggs_intensity(hotspots_eggs = spde_eggs_guadalajara_zinb1,
 
 ### cadenas de Transmisión 
 
-```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "75%", out.height="75%"}
+```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "90%", out.height="90%"}
 # 1. Subir el archivo cas y geo generado con la función write_cas_geo
 load("C:/Users/felip/Dropbox/manual_hotspots_veracruz/9.cas&geo_files/Xalapa de Enriquez302019.RData")
 
@@ -451,6 +453,40 @@ denhotspots::space_time_link_map(x = knox_res,
                                  facetmap = FALSE)
 ```
 
+---
+### cadenas de Transmisión 
+```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "80%", out.height="80%"}
+denhotspots::space_time_link_map(x = knox_res,
+                                 locality = "Xalapa de Enríquez",
+                                 cve_edo = "30",
+                                 maptype = "staticmap",
+                                 facetmap = TRUE)
+```
+
+---
+### Spatial Log Gaussian Cox Process
+
+```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "90%", out.height="90%"}
+source("C:/Users/felip/OneDrive/proyects/spatial_analysis_dengue/point_process/spatial_point_process/3.Functions/spatial_lgcp.R")
+source("C:/Users/felip/OneDrive/proyects/spatial_analysis_dengue/point_process/spatial_point_process/3.Functions/lgcp_map.R")
+mod_lattice_lgcp <- spatial_lgcp(dataset = x_data,
+                                 locality = "Xalapa de Enríquez",
+                                 cve_edo = "30",
+                                 longitude = "x",
+                                 latitude = "y",
+                                 k = 80,
+                                 plot = TRUE,
+                                 aproximation = "gaussian",
+                                 integration = "eb",
+                                 resolution = 0.005,
+                                 approach = "lattice",
+                                 name = "YlGnBu")
+lgcp_map(x = mod_lattice_lgcp, 
+         lgcp_type = "lattice", 
+         map_type = "staticmap", 
+         name = "YlGnBu")
+
+```
 
 
 ---
@@ -469,7 +505,6 @@ denhotspots::space_time_link_map(x = knox_res,
 
 ---
 
-
 ### Definición del Riesgo de Transmisión.
 
 .bg-gold.b--yellow.ba.bw2.br3.shadow-5.ph4.mt5[
@@ -479,6 +514,12 @@ denhotspots::space_time_link_map(x = knox_res,
 .bg-springgreen.b--green.ba.bw2.br3.shadow-5.ph4.mt5[
 **Riesgo Bajo**. Áreas sin hotspots de transmisión de dengue y áreas sin hotspot de la abundancias del vector.
 ]
+
+
+---
+### Mapa de Riesgo de Transmisión de Guadalajara
+
+
 
 
 ---
