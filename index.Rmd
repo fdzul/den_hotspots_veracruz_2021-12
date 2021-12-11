@@ -496,11 +496,12 @@ lgcp_map(x = mod_lattice_lgcp,
 
 ```
 
+
 --- 
 
 ### Combinando los hotspots de los casos y el vector
 
-```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "90%", out.height="90%"}
+```{r, echo=FALSE,dpi=300, warning = FALSE, message = FALSE, fig.align ="center", out.width = "80%", out.height="80%"}
 # Step 2. extract the ageb of guadalajara ####
 agebs <- cases_hotspots_agebs19 |>
     sf::st_make_valid() |>
