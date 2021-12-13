@@ -477,6 +477,8 @@ knitr::include_graphics("figs/map_risk_guadalajara.jpg")
 &nbsp;
 &nbsp;
 
+- ***bio***         :     https://fdzul.github.io/web_site_fadm/
+
 - ***email***       :     Userse.dzul.m@gmail.com
 
 - ***celular***     :     228 229 3419
