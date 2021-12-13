@@ -197,7 +197,7 @@ class: center, middle
 5. Contar el número de casos por AGEB.
 6. Cálcular el Z-score de los casos.
 7. Generar la matriz de adjacencias.
-8. Cálcular el estadístico espacial local Getis&Ord ($$G{_i}^{*}$$).
+8. Cálcular el estadístico espacial local Getis&Ord $\color{#2ECC40}G_{\color{#2ECC40}i}^{\color{#2ECC40}*}$.
 9. Realizar la la corrección de Bonferroni.
 10. Cálcular los hotspots.
 11. Visualizar los hotspots.
@@ -248,7 +248,7 @@ DiagrammeR::grViz("digraph {
 .tiny[.blue[.footnote[Dzul-Manzanilla et al 2021.]]]
 ---
 
-### Algoritmo para la identificación de los Hotspots del Vector
+### Identificación de los hotspots del Vector
 
 ```{r, echo=FALSE,dpi=300,  fig.align ="center",out.height="70%", out.width = "90%"}
 DiagrammeR::grViz("digraph {
@@ -309,7 +309,7 @@ DiagrammeR::grViz("digraph {
 
 ---
 
-### Algoritmo  para la identificación de los Hotspots del Vector
+### Identificación de los Hotspots del Vector
 
 ```{r, echo=FALSE,dpi=300, fig.align ="center", out.height="70%", out.width = "90%"}
 DiagrammeR::grViz("digraph {
@@ -368,27 +368,25 @@ DiagrammeR::grViz("digraph {
 
 ---
 
-### Estadístico Espacial Local $G_{i}^{*}$ (Hotspots)
+### Estadístico Espacial Local $\color{#2ECC40}G_{\color{#2ECC40}i}^{\color{#2ECC40}*}$ (Hotspots)
 
-&nbsp;
-### $G_{i}^{*}$ = $\frac{ \sum_{j = 1}^{n} w_{ij}x_{j}  }{\sum_{j = 1}^{n} x_{j}}$
 
-\color{blue}G_{\color{blue}i}^{\color{blue}*}
-
+$$\color{#2ECC40}G_{\color{#2ECC40}i}^{\color{#2ECC40}*} = \frac{\color{#FF4136}\sum_{\color{#FF4136}j \color{#FF4136}= \color{#FF4136}1}^\color{#FF4136}{n} \color{#FF4136}w_{\color{#FF4136}i\color{#FF4136}j}\color{#FF4136}x_{\color{#FF4136}j}}
+{\color{#0074D9}\sum_{\color{#0074D9}j \color{#0074D9}= \color{#0074D9}1}^{\color{#0074D9}n} \color{#0074D9}x_{\color{#0074D9}j}}$$
 
 donde:
  
-$\frac{\sum_{j = 1}^{n} w_{ij}x_{j}}{}$ = el numerador, es la suma de los valores $x_{j}$ de la localidad de interes de la unidad espacial de interes $x_{i}$ &
+$\color{#FF4136}\sum_{\color{#FF4136}j \color{#FF4136}= \color{#FF4136}1}^\color{#FF4136}{n} \color{#FF4136}w_{\color{#FF4136}i\color{#FF4136}j}\color{#FF4136}x_{\color{#FF4136}j}$ el numerador, es la suma de los valores $x_{j}$ de la localidad de interes de la unidad espacial de interes $x_{i}$ &
  
   
+
  
- 
- $\frac{}{\sum_{j = 1}^{n} x_{j}}$ = el denominador, es la suma de todos los valores $x$ en toda la localidad de interes.
+ $\frac{}{\color{#0074D9}\sum_{\color{#0074D9}j \color{#0074D9}= \color{#0074D9}1}^{\color{#0074D9}n} \color{#0074D9}x_{\color{#0074D9}j}}$ el denominador, es la suma de todos los valores $x$ en toda la localidad de interes.
 
 
 ### **hotspots** 
 
-son las áreas o las unidades espaciales con valores altos de $G_{i}^{*}$ y homogéneos de la unidad espaciales de interes $x_{ij}$. En otras palabras el estadístico espacial, identifica las unidades espaciales $x_{ij}$ con valores altos comparados con el valor promedio de todas la unidades espaciales en la localidad de interes.
+son las áreas o las unidades espaciales con valores altos de $\color{#2ECC40}G_{\color{#2ECC40}i}^{\color{#2ECC40}*}$ y homogéneos de la unidad espaciales de interes $x_{ij}$. En otras palabras el estadístico espacial, identifica las unidades espaciales $x_{ij}$ con valores altos comparados con el valor promedio de todas la unidades espaciales en la localidad de interes.
 
 ---
 ### Hotspots de la Transmisión de Dengue en Guadalajara.
