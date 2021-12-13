@@ -197,7 +197,7 @@ class: center, middle
 5. Contar el número de casos por AGEB.
 6. Cálcular el Z-score de los casos.
 7. Generar la matriz de adjacencias.
-8. Cálcular el estadístico espacial local Getis&Ord ($G{_i}^{*}$).
+8. Cálcular el estadístico espacial local Getis&Ord ($$G{_i}^{*}$$).
 9. Realizar la la corrección de Bonferroni.
 10. Cálcular los hotspots.
 11. Visualizar los hotspots.
@@ -393,26 +393,27 @@ son las áreas o las unidades espaciales con valores altos de $G_{i}^{*}$ y homo
 ---
 ### Hotspots de la Transmisión de Dengue en Guadalajara.
 
-
+![](figs/intensity_cases_guadalajara.jpg)
 
 ---
  
 ### Hotspots del Vector en Guadalajara, Jalisco.
+![](figs/hotspots_eggs_intensity_guadalajara.jpg)
 
 ---
 
 ### Cadenas de Transmisión 1
 
+![](figs/cadenas_guadalajara_2020.jpg)
 
 
 ---
 ### Cadenas de Transmisión 2
-
-
+![](figs/cadenas_guadalajara_2020_facet.jpg)
 ---
 ### Spatial Log Gaussian Cox Process
 
-
+![](figs/lgcp_xalapa.jpg)
 
 
 ---
