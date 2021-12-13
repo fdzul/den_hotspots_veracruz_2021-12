@@ -186,10 +186,24 @@ htmltools::html_print(htmltools::tagList(htmltools::tags$style(style), a))
 
 
 ---
+class: center, middle
 
 ### Algoritmo para la identificación de los Hotspots de Dengue
-
-```{r, dpi=300,echo=FALSE, fig.alt=1,fig.align ="center", out.height="70%", out.width = "90%"}
+.pull-left[
+1. Bajar las bases de datos del **[SINAVE](https://www.sinave.gob.mx/)**.
+2. Geocodificar las bases.
+3. Bajar los shapefile del **[INEGI](https://www.inegi.org.mx/)**.
+4. Seleccionar la localidad de interes y extraer los AGEBs.
+5. Contar el número de casos por AGEB.
+6. Cálcular el Z-score de los casos.
+7. Generar la matriz de adjacencias.
+8. Cálcular el estadístico espacial local Getis&Ord ($G{_i}^{*}$).
+9. Realizar la la corrección de Bonferroni.
+10. Cálcular los hotspots.
+11. Visualizar los hotspots.
+]
+.pull-right[
+```{r, dpi=300,echo=FALSE, fig.align ="center", out.width = "100%"}
 DiagrammeR::grViz("digraph {
 
   # graph definitions
@@ -207,7 +221,6 @@ DiagrammeR::grViz("digraph {
   gi [label = 'Estadístico Espacial Local (Gi*)']
   bonferroni [label = 'Corrección de Bonferroni']
   hotspots [label = 'Hotspots', style = filled, color = orange]
-  vis [label = 'Visualizacion de los Hotspots']
   
   # flow chart for inegi
   inegi [label = 'INEGI', fillcolor = 'DeepSkyBlue', color = 'white', fontcolor = 'black']
@@ -219,7 +232,7 @@ DiagrammeR::grViz("digraph {
   
   # edge definitions with the node IDs
   edge [color = black]
-  sinave -> denv -> geocode -> cases_ageb -> z_score -> gi -> bonferroni -> hotspots -> vis
+  sinave -> denv -> geocode -> cases_ageb -> z_score -> gi -> bonferroni -> hotspots 
   inegi -> {ageb, loc}
   loc -> loc_esp -> ageb_esp
   ageb -> ageb_esp
@@ -227,10 +240,12 @@ DiagrammeR::grViz("digraph {
   mat -> cases_ageb 
  
   }", 
-  height = 500)
+  height = 550)
 
 ```
+]
 
+.tiny[.blue[.footnote[Dzul-Manzanilla et al 2021.]]]
 ---
 
 ### Algoritmo para la identificación de los Hotspots del Vector
