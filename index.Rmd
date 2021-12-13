@@ -389,9 +389,23 @@ $\color{#FF4136}\sum_{\color{#FF4136}j \color{#FF4136}= \color{#FF4136}1}^\color
 son las áreas o las unidades espaciales con valores altos de $\color{#2ECC40}G_{\color{#2ECC40}i}^{\color{#2ECC40}*}$ y homogéneos de la unidad espaciales de interes $x_{ij}$. En otras palabras el estadístico espacial, identifica las unidades espaciales $x_{ij}$ con valores altos comparados con el valor promedio de todas la unidades espaciales en la localidad de interes.
 
 ---
-### Hotspots de la Transmisión de Dengue en Guadalajara.
+## Hotspots de la transmisión del Dengue
 
-![](figs/intensity_cases_guadalajara.jpg)
+&nbsp;
+
+.pull-left[
+
+.large[.justify-left[.blue[Los ***hotspots*** de las arbovirosis transmitidas por ***Aedes aegypti*** son definidas como aquellas áreas donde se concentra la mayor carga de la transmisión de los virus del dengue, chikungunya y/ó zika]]]
+
+]
+.pull-right[
+.blue[Hotspots del área urbana de Guadalajara]
+<img src = "figs/intensity_cases_guadalajara.jpg" width="450">
+]
+
+
+.tiny[.blue[.footnote[Dzul-Manzanilla et al 2021.]]]
+
 
 ---
  
@@ -400,13 +414,13 @@ son las áreas o las unidades espaciales con valores altos de $\color{#2ECC40}G_
 
 ---
 
-### Cadenas de Transmisión 1
+### Cadenas de Transmisión
 
 ![](figs/cadenas_guadalajara_2020.jpg)
 
 
 ---
-### Cadenas de Transmisión 2
+### Cadenas de Transmisión 
 ![](figs/cadenas_guadalajara_2020_facet.jpg)
 ---
 ### Spatial Log Gaussian Cox Process
@@ -420,6 +434,7 @@ son las áreas o las unidades espaciales con valores altos de $\color{#2ECC40}G_
 
 &nbsp;
 
+
 .bg-washed-red.b--dark-red.ba.bw2.br3.shadow-5.ph4.mt5[
 **Riesgo Muy Alto**. Áreas definidas como aquellas unidades espaciales (AGEBS) identificadas como hotspots de transmisión de dengue que presentan sobrelape espacial con los hotspots de la abundancia de huevos de *Ae. aegypti* y concordancia espacial con los cluster de transmisión de dengue (Satscan análisis) y las cadenas de transmision (knox test). El sobrelape espacial de los space-time análisis aun no esta implementado. 
 ]
@@ -432,31 +447,45 @@ son las áreas o las unidades espaciales con valores altos de $\color{#2ECC40}G_
 
 
 ---
-
-### Definición del Riesgo de Transmisión.
-
-.bg-salmon.b--orange.ba.bw2.br3.shadow-5.ph4.mt5[
-**Riesgo Alto**. Áreas identificadas como hotspots de transmisión de dengue.
-]
+### Modelo estratégico de focalización 
 
 &nbsp;
 
-.bg-gold.b--yellow.ba.bw2.br3.shadow-5.ph4.mt5[
-**Riesgo Medio**. Áreas identificadas como hotspots de transmisión de la abundancia de Huevos de *Ae. aegypti*.
+.pull-left[
+
+.large[.justify-left[.blue[Los ***hotspots*** de las arbovirosis transmitidas por ***Aedes aegypti*** son definidas como aquellas áreas donde se concentra la mayor carga de la transmisión de los virus del dengue, chikungunya y/ó zika]]]
+
+]
+.pull-right[
+.blue[Hotspots del área urbana de Guadalajara]
+<img src = "figs/intensity_cases_guadalajara.jpg" width="500">
 ]
 
-&nbsp;
-.bg-springgreen.b--green.ba.bw2.br3.shadow-5.ph4.mt5[
-**Riesgo Bajo**. Áreas sin hotspots de transmisión de dengue y áreas sin hotspot de la abundancias del vector.
-]
+
+.tiny[.blue[.footnote[Dzul-Manzanilla et al 2021.]]]
 
 
 ---
-### Mapa de Riesgo de Transmisión de Guadalajara
+class: center
+## Definición del Modelo estratégico de focalización 
+&nbsp;
 
-```{r}
+.pull-left[
+- .red[**Áreas con riesgo muy alto de tranmisión**.] Hotposts de casos + hotspots del vector. 
 
+- .orange[**Áreas con riesgo alto de transmisión**.]  Hotspots de transmisión de casos.
+
+- .yellow[**Áreas con riesgo medio de transmisión**.] Hotspots del vector.
+
+- .green[**Áreas con riesgo bajo de transmisión**]. Sin hotspots del vector o hotspots de casos.
+]
+
+.pull-right[
+Guadalajara
+```{r, out.width = "90%", fig.fullwidth =TRUE, fig.width=10, fig.height=2, echo = FALSE, message=FALSE,dpi=300, warning=FALSE}
+knitr::include_graphics("figs/intensity_cases_guadalajara.jpg")
 ```
+]
 
 
 
