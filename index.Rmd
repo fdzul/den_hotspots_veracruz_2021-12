@@ -452,7 +452,7 @@ class: center, middle
 &nbsp;
 
 .pull-left[
-- .red[**Áreas con riesgo muy alto de tranmisión**.] Hotposts de casos + hotspots del vector. 
+- .red[**Áreas con riesgo muy alto de transmisión**.] Hotposts de casos + hotspots del vector. 
 
 - .orange[**Áreas con riesgo alto de transmisión**.]  Hotspots de transmisión de casos.
 
@@ -472,8 +472,9 @@ knitr::include_graphics("figs/map_risk_guadalajara.jpg")
 
 ---
 
-# Thanks!
+# Dios Botic!
 
+&nbsp;
 &nbsp;
 
 - ***email***       :     Userse.dzul.m@gmail.com
